@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public bool isFromPlayer { get; set; }
 
     public Vector2 direction = new Vector2(1, 0);
     public float speed = 2;
@@ -14,6 +15,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 3);
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame

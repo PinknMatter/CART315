@@ -122,13 +122,27 @@ public class Ship : MonoBehaviour
         Destructable destructable = collision.GetComponent<Destructable>();
         if (destructable != null)
         {
-            // if (bullet.isEnemy)
-            // {
-            //     Destroy(gameObject);
-            //     Destroy(destructable.gameObject);
+
+            if (bullet != null)
+            {
+                if (!bullet.isEnemy)
+                {
+                    Debug.Log("friendly");
+                }
+                else
+                {
+                    Destroy(gameObject);
+                    Destroy(bullet.gameObject);
+                }
 
 
-            // }
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+
 
 
         }

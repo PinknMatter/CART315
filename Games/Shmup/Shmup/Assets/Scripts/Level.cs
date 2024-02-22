@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
@@ -11,13 +12,29 @@ public class Level : MonoBehaviour
     bool startNextLevel = false;
     float nextLevelTimer = 3;
 
-    string[] levels = { "Level1", "Level2" };
+
+    string[] levels = { "Level1", "Level2", "Level3", "Level4" };
     int currentLevel = 1;
+
+    int score = 0;
+    Text scoreText;
     // Start is called before the first frame update
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
     void Start()
     {
@@ -49,6 +66,11 @@ public class Level : MonoBehaviour
                 nextLevelTimer -= Time.deltaTime;
             }
         }
+    }
+    public void AddScore(int points)
+    {
+        score += points;
+        scoreText.text = "Score: " + score.ToString();
     }
 
     public void AddDestructable()

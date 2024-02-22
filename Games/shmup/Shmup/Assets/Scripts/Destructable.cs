@@ -5,7 +5,9 @@ using UnityEngine;
 public class Destructable : MonoBehaviour
 {
     bool canBeDestroyed = false;
-    // Start is called before the first frame update
+    public int scoreValue = 10;
+
+
     void Start()
     {
         if (Level.instance != null)
@@ -18,7 +20,6 @@ public class Destructable : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -33,11 +34,7 @@ public class Destructable : MonoBehaviour
         }
     }
 
-    /// <summary>   
-    /// Sent when another object enters a trigger collider attached to this
-    /// object (2D physics only).
-    /// </summary>
-    /// <param name="other">The other Collider2D involved in this collision.</param>
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!canBeDestroyed)
@@ -49,6 +46,7 @@ public class Destructable : MonoBehaviour
         {
             if (!bullet.isEnemy)
             {
+                Level.instance.AddScore(scoreValue);
                 Destroy(gameObject);
                 Destroy(bullet.gameObject);
 
@@ -58,9 +56,7 @@ public class Destructable : MonoBehaviour
     }
 
 
-    /// <summary>
-    /// This function is called when the MonoBehaviour will be destroyed.
-    /// </summary>
+
     private void OnDestroy()
     {
         Level.instance.RemoveDestructable();
