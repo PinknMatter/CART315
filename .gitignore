@@ -161,3 +161,5 @@ Thumbs.db
 Desktop.ini
 ehthumbs.db
 Local/*
+/fillaHole_debug
+/Games/shmup

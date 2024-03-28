@@ -66,3 +66,15 @@ We decided to remove the "RPG" Battle component since it would disrupt the overa
 My role within the game is designing the HUD and GameManagement Systems. I'm to design how the meters work and how they effect the overall happiness as well as the Event Log, Player Count and Time.
 
 We first started by designing the art to get it out of the way first, we went for a top-down pixel art to pay homage to pokemon.
+
+# Week 9 Interative Prototype
+
+This week I started working the Meter interactions I created a Meter class so each Meter follows the class blueprint to make it easier and not have a bunch of different meter scripts, the Happiness meter works a bit different since its calculated from all the other Meters so it has its own script. I ran into issues visually displaying the scripts, but I ended up using the UI panels to display them. I now have to connect all the pieces and make the scripts move with the values given to it.
+
+Tasks still to do:
+
+- Event Log
+- Player Count
+- Player Time
+- End Screen
+- Win screen
