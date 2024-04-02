@@ -78,3 +78,13 @@ Tasks still to do:
 - Player Time
 - End Screen
 - Win screen
+
+## Week 10 Journal Update
+
+This Week I finished the Meter Interactions, they should now update visually and internally based on the value sent. There are Three Meters, Drink, Music, Trash each is attached to a visual meter and can be sent a value (- +) that changes it. These meters then fall into the Happiness Meter which calculates the overall satisfaction across all the meters. I also added a Time Text that has a changeable time value, so you can set how long it takes to go from 22:00-6:00, right now the value is set to 5 minutes but it needs further exploration to see. A People count was also sent up to manage how many People there are in the house party
+
+Task still to do:
+
+- Event log
+- Win Screen
+- End Screen
