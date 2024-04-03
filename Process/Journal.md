@@ -78,6 +78,8 @@ Tasks still to do:
 - Player Time
 - End Screen
 - Win screen
+  ![alt text](./CART315_Prototype01_Screen.jpg)
+  ![alt text](./CART315_Prototype01_Cards.jpg)
 
 ## Week 10 Journal Update
 
@@ -102,6 +104,7 @@ On Louis side he needs to make the character and the game mechanics, once these 
 
 Task still to do:
 
+- Player
 - Event Log
 - Win Screen
 - End Screen
