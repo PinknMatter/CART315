@@ -83,8 +83,25 @@ Tasks still to do:
 
 This Week I finished the Meter Interactions, they should now update visually and internally based on the value sent. There are Three Meters, Drink, Music, Trash each is attached to a visual meter and can be sent a value (- +) that changes it. These meters then fall into the Happiness Meter which calculates the overall satisfaction across all the meters. I also added a Time Text that has a changeable time value, so you can set how long it takes to go from 22:00-6:00, right now the value is set to 5 minutes but it needs further exploration to see. A People count was also sent up to manage how many People there are in the house party
 
+![alt text](/Process/doc2.png)
+
 Task still to do:
 
+- Merge branches
 - Event log
+- Win Screen
+- End Screen
+
+## Week 11 Journal Update
+
+Today we merged our branches, the game itself is starting to come to shape. We have both the gameplay and the HUD in the same scene. There was not too many issues merging and it was relatively easy. We had to fix a lot of the sprites so it would line up with each. I also added more furniture in and added a font to give the text a more retro vibe. As of now most of the visual components are in and the meters are hooked up. I now have to link my player count with the AI player count.
+
+On Louis side he needs to make the character and the game mechanics, once these are done hooking everything up should be quite easy. We will aim to have one level start to finish done by the due date.
+
+![alt text](./doc3.png)
+
+Task still to do:
+
+- Event Log
 - Win Screen
 - End Screen
